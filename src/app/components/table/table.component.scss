@@ -1,0 +1,76 @@
+:host ::ng-deep   .ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+    border-right: 1px solid lightgray !important;
+}
+ :host ::ng-deep   .datatable-header-cell-label {
+    font-size: 21px !important;
+    font-family: 'Open Sans' !important;
+}
+ :host ::ng-deep #mainCard .mat-table-container .mat-table .datatable-header .datatable-header-cell {
+    border-right: 1px solid lightgray !important;
+}
+ :host ::ng-deep   .ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell {
+    font-size: 18px !important;
+    font-family: 'Open Sans' !important;
+    color: black !important;
+    border-bottom: 1px solid lightgray !important;
+}
+ :host ::ng-deep   .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
+    color: black !important;
+    // padding: 13px !important;
+}
+ :host ::ng-deep   .mat-table-container .mat-table .datatable-body .datatable-row-wrapper .datatable-body-row .datatable-body-cell {
+    font-size: 20px !important;
+    font-family: 'Open Sans' !important;
+}
+
+.row-filter {
+    background: #f5f5f5;
+    margin-top: 10px;
+}
+
+:host ::ng-deep mat-form-field.search-filter .mat-form-field-infix {
+    border: 0;
+}
+ :host ::ng-deep .floating .mat-form-field-infix {
+    padding: 0 !important;
+    border-top: 2px !important;
+}
+ :host ::ng-deep mat-form-field.search-filter .mat-form-field-underline {
+    background-color: transparent !important;
+    display: none !important;
+}
+:host ::ng-deep mat-form-field.search-filter .mat-form-field-label-wrapper {
+    line-height: 2.4 !important;
+    font-size: 18px;
+    text-indent: 10px;
+    overflow: visible;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+}
+:host ::ng-deep .ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell{
+    background: #f5f5f5 !important;
+    border-left: 1px solid lightgray !important;
+}
+:host ::ng-deep  .mat-form-field{
+    background: #FFF !important;
+    border: 1px solid lightgray !important; 
+}
+.header{
+    padding: 13px;
+    background: #F96302;
+    color: #FFF;
+    font-size: 19px;
+}
+
+input {
+    padding: 11px;
+    
+    }
+
+    :host ::ng-deep    .ngx-datatable .datatable-header .datatable-header-cell .sort-btn{
+        color: red !important
+    }
+
+    :host ::ng-deep .mat-icon{
+        height: 12px !important;
+    }

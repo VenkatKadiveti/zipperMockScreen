@@ -1,0 +1,9 @@
+<div style="height: 100%;background-color: black;color:#FFF;padding-top: 10px;" fxLayout="column" fxLayoutAlign="start"
+    fxLayoutGap="20px">
+    <span class="activeSpan" [ngStyle]="{background: path === '/'? '#F96302' : '' }"
+        (click)="renderPages('/')">Table</span>
+    <span class="activeSpan" style="padding: 10px;" [ngStyle]="{background: path === '/map'? '#F96302' : '' }"
+        (click)="renderPages('/map')">Maps</span>
+    <span class="activeSpan" style="padding: 10px;" [ngStyle]="{background: path === '/graph'? '#F96302' : '' }"
+        (click)="renderPages('/graph')">Graph</span>
+</div>

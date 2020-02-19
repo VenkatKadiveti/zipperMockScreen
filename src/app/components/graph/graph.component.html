@@ -1,0 +1,56 @@
+<div style="padding:20px" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="30px">
+    <mat-card fxFlex="50">
+        <div style="border:1px solid lightgray" fxLayout="column" fxLayoutGap="10px">
+            <div class="graph-header" fxLayout="row" fxLayoutAlign="center">
+                <span fxLayoutAlign="center">REAL TIME ACTIVETI</span>
+            </div>
+            <div style="height: 300px;overflow: auto;">
+                <div *ngFor="let data of activities">
+                    <div style="padding: 5px;" fxlayoutAlign="center" fxLayout="row" fxLayoutGap="5px">
+                        <span>{{data.name}} createdBy</span>
+                        <a> {{data.createdBy}}</a>
+                        <span>({{data.time}})</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+
+
+
+    <mat-card fxFlex="50" fxLayout="column">
+        <div class="graph-header" fxLayout="row" fxLayoutAlign="center">
+            <span fxLayoutAlign="center">TIMELINE</span>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="10px">
+            <mat-form-field appearance="outline">
+                <mat-select [(value)]="selectedAgent">
+                    <mat-option *ngFor="let agent of agents" [value]="agent">
+                        {{agent}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="outline">
+                <mat-select [(value)]="selectedDays">
+                    <mat-option *ngFor="let day of days" [value]="day">
+                        {{day}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-select [(value)]="selectedPackets">
+                    <mat-option *ngFor="let packet of packets" [value]="packet">
+                        {{packet}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <canvas id="line-chart"></canvas>
+        </div>
+    </mat-card>
+
+</div>

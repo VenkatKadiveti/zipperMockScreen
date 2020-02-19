@@ -1,0 +1,31 @@
+<div id="FilterTable" style="padding: 15px;" fxlayout="column">
+    <div class="header" fxLayout="row" fxLayoutAlign="center">
+        <span fxLayoutAlign="center">ULB REPORT</span>
+    </div>
+    <ngx-datatable class="material" [rows]="data" [messages]="message" [columnMode]="'force'" [headerHeight]="120" [footerHeight]="50"
+        rowHeight="auto" [limit]="5">
+        <ngx-datatable-column *ngFor="let col of columns" [name]="col.name" [sortable]="false" [draggable]="true"
+            [resizeable]="true" [prop]="col.prop" [width]="100">
+            <ng-template ngx-datatable-header-template  >
+                <div (click)="sort(col.prop)" style="cursor: pointer;" fxLayoutAlign="start" class="datatable-header-cell-wrapper">
+                    <span class="datatable-header-cell-label draggable" id="openSideNavTest">{{col.displayName}}</span>
+                    <div fxLayout="column" fxLayoutGap="0px" >
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_arrow_up</mat-icon>
+                        <mat-icon aria-hidden="false" aria-label="Example home icon">keyboard_arrow_down</mat-icon>
+                    </div>
+                   
+                </div>
+                <div fxLayoutAlign="start" class="row-filter">
+                    <input matInput id="isAppFilter" [placeholder]="col.placeholder"
+                        [(ngModel)]="ngModelNames[col.ngModelName]"
+                        (input)="filterCall()"
+                        class="filter-input"
+                        [name]="col.name">
+                </div>
+            </ng-template>
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                {{value}}
+            </ng-template>
+        </ngx-datatable-column>
+    </ngx-datatable>
+</div>
